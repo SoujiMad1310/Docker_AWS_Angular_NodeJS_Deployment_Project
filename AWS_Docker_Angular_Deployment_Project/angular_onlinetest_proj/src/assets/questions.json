@@ -1,0 +1,178 @@
+
+{
+    "questions": [{
+            "questionText": "Which statement is true?",
+            "options": [{
+                    "text": "A try statement must have at least one corresponding catch block."                    
+                },
+                {
+                    "text": "Multiple catch statements can catch the same class of exception more than once."
+                },
+                {
+                    "text": "An Error that might be thrown in a method must be declared as thrown by that method, or be handled within that method."
+                },
+                {
+                    "text": "Except in case of VM shutdown, if a try block starts to execute, a corresponding finally block will always start to execute.",
+                    "correct": true
+                }
+            ]            
+        },
+        {
+            "questionText": "Which two statements are true?\n 1. Deadlock will not occur if wait()/notify() is used \n2. A thread will resume execution as soon as its sleep duration expires. \n3. Synchronization can prevent two objects from being accessed by the same thread. \n4. The wait() method is overloaded to accept a duration. \n5. The notify() method is overloaded to accept a duration. \n6 .Both wait() and notify() must be called from a synchronized context.",
+            "options": [{
+                    "text": "1 and 2"
+                },
+                {
+                    "text": "3 and 5"
+                },
+                {
+                    "text": "4 and 6",
+                    "correct": true
+                },
+                {
+                    "text": "1 and 3"
+                    
+                }
+            ]            
+        },
+        {
+            "questionText": "Which statement is true?",
+            "options": [{
+                    "text": "Assertions can be enabled or disabled on a class-by-class basis.",
+                    "correct": true
+                },
+                {
+                    "text": "Conditional compilation is used to allow tested classes to run at full speed."
+                    
+                },
+                {
+                    "text": "Assertions are appropriate for checking the validity of arguments in a method."
+                },
+                {
+                    "text": "The programmer can choose to execute a return statement or to throw an exception if an assertion fails."
+                }
+            ]          
+        },
+        {
+            "questionText": "What two statements are true about the result obtained from calling Math.random()?\n 1. The result is less than 0.0.\n 2. The result is greater than or equal to 0.0. \n3. The result is less than 1.0.\n 4. The result is greater than 1.0.\n 5.The result is greater than or equal to 1.0.",
+            "options": [{
+                    "text": "1 and 2"
+                },
+                {
+                    "text": "2 and 3",
+                    "correct": true
+                },
+                {
+                    "text": "3 and 4"
+                },
+                {
+                    "text": "4 and 5"
+                }
+            ]            
+        },
+        {
+            "questionText": "Which of the following will directly stop the execution of a Thread?",
+            "options": [{
+                    "text": "wait()",
+                    "correct": true
+                },
+                {
+                    "text": "notify()"
+                },
+                {
+                    "text": "notifyall()"
+                },
+                {
+                    "text": "exits synchronized code"
+                }
+            ]
+          
+        },
+        {
+            "questionText": "Which is NOT an access modifier?",
+            "options": [{
+                    "text": "private"
+                },
+                {
+                    "text": "protected"
+                },
+                {
+                    "text": "public"
+                },
+                {
+                    "text": "async",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionText": "Which three are valid declarations of a float?\n 1. float f1 = -343; \n 2. float f2 = 3.14; \n 3. float f3 = 0x12345; \n 4. float f4 = 42e7; \n 5. float f5 = 2001.0D; \n 6. float f6 = 2.81F;",
+            "options": [{
+                    "text": "1, 2, 4"
+                }, 
+                {
+                    "text": "2, 3, 5"
+                },
+                {
+                    "text": "1, 3, 6",
+                    "correct": true
+                },
+                {
+                    "text": "2, 4, 6"
+                }
+            ]           
+        },
+        {
+            "questionText": "Which cause a compiler error? ",
+            "options": [{
+                    "text": "int[ ] scores = {3, 5, 7};"
+                },
+                {
+                    "text": "int [ ][ ] scores = {2,7,6}, {9,3,45};"
+                },
+                {
+                    "text": "String cats[ ] = {\"Fluffy\", \"Spot\", \"Zeus\"};",
+                    "correct": true
+                },
+                {
+                    "text": "Integer results[ ] = {new Integer(3), new Integer(5), new Integer(8)};"
+                }
+            ]
+        },
+        {
+            "questionText": "What will be the output of the program? \n for (int i = 0; i < 4; i += 2) \n { \n     System.out.print(i + \" \"); \n  } \n System.out.println(i); /* Line 5 */",
+            "options": [{
+                    "text": "0 2 4"
+                },
+                {
+                    "text": "0 2 4 5"
+                },
+                {
+                    "text": "0 1 2 3 4"
+                },
+                {
+                    "text": "Compilation fails.",
+                    "correct": true
+                }
+            ]
+        },
+
+        {
+            "questionText": "Which of the following classes are available in the java.lang package?",
+            "options": [{
+                    "text":"Stack"
+                },
+                {
+                    "text": "Object",
+                    "correct": true
+                },
+                {
+                    "text": "Vector"
+                },
+                {
+                    "text": "Random"
+                }
+            ]
+        }
+    ]
+}

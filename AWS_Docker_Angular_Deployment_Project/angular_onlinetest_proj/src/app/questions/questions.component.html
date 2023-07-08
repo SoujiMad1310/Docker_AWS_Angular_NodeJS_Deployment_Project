@@ -1,0 +1,71 @@
+<div class = "container mt-3">
+    <div class="card">
+        <div class="d-flex justify-content-between p-2">
+            <div class="image">
+                <img src="https://img.icons8.com/color/1x/java-coffee-cup-logo.png" alt="" width="50" height="50" class="d-inline-block align-text-top">
+            </div>
+            <div class="quiz-header">
+                <h4 class="font-family: cursive;">Java Test!!!</h4>
+                <span style="font-style: italic;">Welcome {{name}}</span>
+            </div>
+        </div>
+        <ng-container *ngIf="!isTestCompleted">
+            <div class="d-flex justify-content-between p-2">
+                <div class="score">
+                    <h4> {{score}} Marks </h4>
+                </div>
+                <div class="question-remain">
+                    <span style="font-style: italic;">Question {{questionNumber+1}} of {{questionsList.length}}</span>
+    
+                </div>
+                <div class="time p-2">
+                    {{counter}} sec <img src="https://img.icons8.com/color/1x/time.png" alt="" width="30" height="30" class="d-inline-block align-text-center">
+                </div>
+            </div>
+            <div class="progress mb-3">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [ngStyle] = "{'width': progressiveBar+'%'}" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+            </div>
+            <div class="question">
+                <div class="card" style="white-space: pre-line">
+                    <h4> {{questionsList[questionNumber]?.questionText}} </h4>
+                </div>
+            </div>
+            <div class="options">
+                    <ol  *ngFor="let option of questionsList[questionNumber]?.options ">
+                        <li (click) = "userAnswer(questionNumber+1, option)">
+                            <div appChangeTestBg [isAnswerCorrect]="option.correct" class="card">
+                                {{option.text}}
+                            </div>
+                        </li>
+                       
+                    </ol>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button [disabled] = "questionNumber===0" class="btn" (click)="previousQuestion()"><img src="https://img.icons8.com/metro/52/22C3E6/circled-left-2.png" alt = "" width="30" height="30"/></button>
+                <button class="btn" (click)="resetTest()"><img src="https://img.icons8.com/metro/52/22C3E6/restart.png" alt = "" width="30" height="30"/></button>
+                <button [disabled] = "questionNumber===questionsList.length-1" class="btn" (click) = "nextQuestion()"><img src="https://img.icons8.com/metro/52/22C3E6/circled-right-2.png" alt = "" width="30" height="30"/> </button>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="isTestCompleted">
+            
+            <div class="row d-flex justify-content-between">
+                <img style = "width: 50%;"class = "img-fluid col-sm-12 mx-auto"src="/assets/ProjectImages/Congratulations.jpeg">
+                <div class="result text-center col-md-6 col-sm-12 text-dark">
+                    <h3>Hurry!! You have successfully completed the Test<br>
+                    <h4>
+                        Your score has been sent to <span style="font-style: italic;">{{email}}</span>
+                    </h4>
+                    Here are your test results: </h3>
+                    
+                    <p> Total Questions Attempted: {{num_of_correct_Ans + num_of_wrong_Ans}}</p>
+                    <p> Number of correct answers: {{num_of_correct_Ans}}</p>
+                    <p> Number of wrong answers: {{num_of_wrong_Ans}}</p>
+                    <p> Positive score for correct answer: {{num_of_correct_Ans*10}}</p>
+                    <p> Negative score for wrong answer: {{num_of_correct_Ans*-5}}</p>
+                    <p class = "fw-bold fs-3"> Total Score: {{score}}</p>
+                </div>
+            </div>
+          
+        </ng-container>
+    </div>
+</div>
